@@ -1,0 +1,78 @@
+.box-container {
+  display: inline-block;
+  width: 50%;
+  height: 30vh;
+  margin: auto;
+  overflow: hidden;
+}
+
+.color-box {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  transition: all 0.15s;
+  position: relative;
+}
+
+.box-container:not(:first-of-type) {
+  margin: -4px 0px 0px 0px;
+}
+
+p {
+  background-color: rgba(255, 255, 255, 0.25);
+  text-align: left;
+  padding: 6px 0px 0px 10px;
+  margin: 0px;
+  line-height: 1em;
+  font-size: 0.7em;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  user-select: none;
+}
+
+p:last-child {
+  padding-bottom: 10px;
+}
+
+p:first-child {
+  padding-top: 12px;
+}
+
+p.rgb:before, p.h:before {
+  display: inline-block;
+}
+
+p.rgb:before {
+  content:"RGB";
+}
+
+p.h:before {
+  content:"#";
+}
+
+.click {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin-top: 0px;
+}
+
+p.rgb:after, p.h:after {
+  display:none;
+  opacity: 0.4;
+  position: absolute;
+  right: 10px;
+}
+
+p.h:after {
+  content:'copy HEX';
+}
+
+p.rgb:after {
+  content:'copy RGB';
+}
+
+p.rgb:hover:after, p.h:hover:after {
+  display:inline-block;
+}
